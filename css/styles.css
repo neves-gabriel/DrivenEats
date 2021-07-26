@@ -1,33 +1,22 @@
 body{
     width: 414px;
-    background: #EEEEEE;;
-    font-family: 'Roboto', sans-serif;
-    color: #262626;
+    background: #EEEEEE;
+    margin:0; 
+    padding:0;
 }
 
-ion-icon {
-    font-size: 24px;
-    z-index:1;
-    cursor: pointer;
-}
-
-a:link, a:visited {
-    color: #262626;
-}
-
-.barra-topo{
-    position: fixed;
+.barra-topo{ 
+    position: fixed;    
     top: 0;
     left: 0;
-    width:inherit;
-    height: 92px;
+    height: 92px;    
+    width: inherit;
+    color: #FFFFFF;
     background: #CF2B2B;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    padding-left: 21px;
-    padding-top: 19px;
+    padding: 19px 0px 0px 21px;
     font-style: normal;
     font-weight: normal;
-    color: #FFFFFF;
     z-index: 2;
 }
 
@@ -44,7 +33,8 @@ a:link, a:visited {
 }
 
 .conteudo {
-    width: inherit - 19px;
+    max-width: inherit;
+    margin: 123px auto 108px auto;
 }
 
 .titulo {
@@ -57,17 +47,12 @@ a:link, a:visited {
     margin-left: 19px;
 } 
 
-.barra-prato {
-    margin-top: 123px;
-}
-
 .barra-bebida{
     margin-top: 27px;
 }  
 
 .barra-sobremesa {
     margin-top: 27px;
-    margin-bottom: 108px;
 }
 
 .container-img {
@@ -94,10 +79,10 @@ a:link, a:visited {
     display: flex;
     flex-direction: row;
     width: 100%;
-    margin-top: 17px;
-    margin-left: 19px;
+    margin: 17px 0px 0px 19px;
     overflow-x: scroll;
     overflow-y: hidden;
+    scrollbar-width: none;
 }
 
 .opcao {
@@ -138,30 +123,160 @@ a:link, a:visited {
     bottom: 13px;
 }
 
-.barra-fechar_pedido {    
-    width: inherit;
-    height: 92px;
+.selecionado{
+    box-shadow: 0px 0px 0px 5px #32B72F inset,  0px 4px 4px rgba(0, 0, 0, .25);
+}
+
+.check{
+    background-image: url(../img/check.png);
+    width: 17px;
+    height: 17px;
+    position: absolute;
+    right: 15px;
+    bottom: 11px;
+}
+
+.escondido{
+    display: none;
+}
+
+.barra-fechar_pedido {        
     position: fixed;
+    width: 433px;
+    height: 92px;
     bottom: 0;
     left: 0;
     display: flex;
     align-items: center;
-    padding: 0 25px;
     background: #FFFFFF;
     box-shadow: 0px -4px 4px rgba(0,0,0,.10);
     z-index: 2;
 }
 
-.barra-fechar_pedido button {
-    height: 61px;
-    background: #CBCBCB;
+button{
     border-radius: 50px;
-    font-family: Roboto;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 20px;
-    text-align: center;
-    letter-spacing: 0.018em;
-    color: #FFFFFF;
     border: none;
+    width: 100%;
+}
+
+button:focus{
+    outline: none;
+ }
+
+#botao-pedir{
+    font-size: 20px;
+    margin: 0px 25px;
+    height: 61px;
+    color: #FFFFFF;
+    transition: .5s;
+}
+
+.botao-desativado{
+    background: #CBCBCB;
+}
+
+.botao-ativado{
+    background: #32B72F;
+    font-weight: bold;
+}
+
+.caixa-sobrepor_fechar-pedido{
+    box-sizing: content-box;
+    background: rgba(255, 255, 255, 0.9);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 3;
+}
+
+.barra_confirmar-pedido{
+    font-size: 22px;
+    display: flex;
+    align-items: center;    
+    justify-content: center;
+    flex-direction: column;
+    border-radius: 9px;
+    color: #FFFFFF;
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    margin: 0px 10px;
+    background: #50D074;
+    box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.25);
+    padding: 21px 15px 3px 15px;
+}
+
+#barra_confirmar-pedido > span:first-of-type{
+    font-weight: bold;
+    margin: 15px 0px;
+}
+
+#barra_confirmar-pedido ul{
+    width: 100%;
+}
+
+#barra_confirmar-pedido li{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.resumo_pedido  li{
+    margin: 15px 0px;
+}
+
+.resumo_pedido li span{
+    margin-right: 10px;
+}
+
+.resumo_pedido li:last-of-type{
+    font-weight: bold;
+}
+
+.dados_cliente li{
+    margin: 8px 0px;
+}
+
+#barra_confirmar-pedido input{
+    width: 100%;
+    height: 30px;
+    font-size: 20px;
+    border-radius: 9px;
+    display: inline;
+    outline: 0px;
+    border: none;
+    color: rgb(114, 114, 114);
+    padding-left: 10px;
+}
+
+.erro{
+    color: rgb(204, 0, 0);
+    font-size: 13px;
+    background-color: rgb(255, 235, 124);
+    border: 2px solid rgb(255, 235, 124);
+}
+
+#barra_confirmar-pedido button{
+    font-size: 22px;
+    height: 52px;
+    font-weight: bold;
+}
+
+.botao_tudo-certo{
+    margin-top: 10px;
+    background: #FFFFFF;
+    color: #50D074;
+}
+
+.botao_cancelar{
+    color: #FFFFFF;
+    font-size: 20px;
+    background: #50D074;
 }

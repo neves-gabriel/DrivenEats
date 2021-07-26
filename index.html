@@ -6,8 +6,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DrivenEats</title>
-    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-    <link rel="icon" href="favicon.ico" type="image/x-icon"> 
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/styles.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">        
@@ -32,6 +30,7 @@
                     <p class="item">Frango Yin Yang</p>
                     <p class="descricao">Um pouco de batata, um pouco de salada</p>
                     <p class="preco">R$ 14,90</p>
+                    <p class="check escondido"></p>
                 </div>
                 <div class="opcao">
                     <div class="container-img">
@@ -40,6 +39,7 @@
                     <p class="item">Feijoada</p>
                     <p class="descricao">Bela feijoada de feijão!</p>
                     <p class="preco">R$ 19,90</p>
+                    <p class="check escondido"></p>
                 </div>
                 <div class="opcao">
                     <div class="container-img">
@@ -48,6 +48,7 @@
                     <p class="item">Filet Parmegiana</p>
                     <p class="descricao">Delícia de Filet Mignon a parmegiana</p>
                     <p class="preco">R$ 24,90</p>
+                    <p class="check escondido"></p>
                 </div>
             </div>
         </div>
@@ -62,6 +63,7 @@
                     <p class="item">Coquinha gelada</p>
                     <p class="descricao">Lata 350ml</p>
                     <p class="preco">R$ 4,90</p>
+                    <p class="check escondido"></p>
                 </div>
                 <div class="opcao">
                     <div class="container-img">
@@ -70,6 +72,7 @@
                     <p class="item">Suco Del Valle</p>
                     <p class="descricao">Lata 390ml</p>
                     <p class="preco">R$ 7,90</p>
+                    <p class="check escondido"></p>
                 </div>
                 <div class="opcao">
                     <div class="container-img">
@@ -78,6 +81,7 @@
                     <p class="item">Água Mineral</p>
                     <p class="descricao">Sem Gás 310ml</p>
                     <p class="preco">R$ 2,90</p>
+                    <p class="check escondido"></p>
                 </div>
             </div>
         </div>
@@ -92,6 +96,7 @@
                     <p class="item">Pudim</p>
                     <p class="descricao">Apenas pudim</p>
                     <p class="preco">R$ 7,90</p>
+                    <p class="check escondido"></p>
                 </div>
                 <div class="opcao">
                     <div class="container-img">
@@ -100,6 +105,7 @@
                     <p class="item">Bolo de Chocolate</p>
                     <p class="descricao">Fatia de um bolo de chocolate</p>
                     <p class="preco">R$ 5,90</p>
+                    <p class="check escondido"></p>
                 </div>
                 <div class="opcao">
                     <div class="container-img">
@@ -108,13 +114,33 @@
                     <p class="item">Açai</p>
                     <p class="descricao">Bela taça de Açai</p>
                     <p class="preco">R$ 14,90</p>
+                    <p class="check escondido"></p>
                 </div>
             </div>
         </div>
     </div>
+
     <div class="barra-fechar_pedido">
-        <button class="fechar_pedido">Selecione os 3 itens para fechar o pedido</button>
+        <button class="botao-desativado" id="botao-pedir">Selecione os 3 itens para fechar o pedido</button>
     </div>
+
+    <div class="caixa-sobrepor_fechar-pedido">
+        <div class="barra_confirmar-pedido">
+            <span>Confirme seu pedido</span>
+            <ul class="resumo_pedido">
+            </ul>
+            <ul class="dados_cliente">
+                <li>Nome:</li>
+                <li><input type="text" class="nome" placeholder="Digite seu nome"></li>
+                <li>Endereço:</li>
+                <li><input type="text" class="endereco" placeholder="Digite seu endereço completo"></li>
+            </ul>
+            <p class="escondido erro">Por favor, preencha ambos os campos acima.</p>
+            <button class="botao_tudo-certo">Tudo certo, pode pedir!</button>
+            <button class="botao_cancelar">Cancelar</button>
+        </div>
+    </div>
+    <script src="js/scripts.js"></script>
 
 </body>
 </html>
