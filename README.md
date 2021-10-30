@@ -11,7 +11,7 @@
  
 ### Realizado por Gabriel Neves no Bootcamp Responde Aí
 
-### Site disponivel em: https://neves-gabriel.github.io/Projeto-03---DrivenEats/
+### Site disponivel em: https://neves-gabriel.github.io/DrivenEats/
 
 #### Preview do projeto:
 ![Preview do projeto](img/preview.png)
