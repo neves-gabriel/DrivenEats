@@ -32,8 +32,8 @@
 
         <section>
             <h1>Primeiro, seu prato</h1>
-            <div class="options">
-                <div class="option" onclick="selecionar_opcao(this)">
+            <div id="dish" class="options">
+                <div class="option dish" onclick="selectOption(this)">
                     <div class="container-img">
                         <img src="assets/img/frango_yin_yang.png" alt="frango_yin_yang">
                     </div>
@@ -42,7 +42,7 @@
                     <p class="price">R$ 14,90</p>
                     <p class="check"></p>
                 </div>
-                <div class="option" onclick="selecionar_opcao(this)">
+                <div class="option dish" onclick="selectOption(this)">
                     <div class="container-img">
                         <img src="assets/img/feijoada.jpg" alt="feijoada">
                     </div>
@@ -51,7 +51,7 @@
                     <p class="price">R$ 19,90</p>
                     <p class="check"></p>
                 </div>
-                <div class="option" onclick="selecionar_opcao(this)">
+                <div class="option dish" onclick="selectOption(this)">
                     <div class="container-img">
                         <img src="assets/img/filet-mignon-a-parmegiana.jpg" alt="filet-mignon-a-parmegiana">
                     </div>
@@ -65,8 +65,8 @@
 
         <section>
             <h1>Agora, sua bebida</h1>
-            <div class="options">
-                <div class="option" onclick="selecionar_opcao(this)">
+            <div id="drink" class="options">
+                <div class="option drink" onclick="selectOption(this)">
                     <div class="container-img">
                         <img src="assets/img/coquinha_gelada.png" alt="coquinha_gelada">
                     </div>
@@ -75,7 +75,7 @@
                     <p class="price">R$ 4,90</p>
                     <p class="check"></p>
                 </div>
-                <div class="option" onclick="selecionar_opcao(this)">
+                <div class="option drink" onclick="selectOption(this)">
                     <div class="container-img">
                         <img src="assets/img/del-valle-lata.jpg" alt="del-valle-lata">
                     </div>
@@ -84,7 +84,7 @@
                     <p class="price">R$ 7,90</p>
                     <p class="check"></p>
                 </div>
-                <div class="option" onclick="selecionar_opcao(this)">
+                <div class="option drink" onclick="selectOption(this)">
                     <div class="container-img">
                         <img src="assets/img/agua-prata.jpg" alt="agua-prata">
                     </div>
@@ -98,8 +98,8 @@
 
         <section>
             <h1>Por fim, sua sobremesa</h1>
-            <div class="options">
-                <div class="option" onclick="selecionar_opcao(this)">
+            <div id="dessert" class="options">
+                <div class="option dessert" onclick="selectOption(this)">
                     <div class="container-img">
                         <img src="assets/img/pudim.png" alt="pudim">
                     </div>
@@ -108,7 +108,7 @@
                     <p class="price">R$ 7,90</p>
                     <p class="check"></p>
                 </div>
-                <div class="option" onclick="selecionar_opcao(this)">
+                <div class="option dessert" onclick="selectOption(this)">
                     <div class="container-img">
                         <img src="assets/img/bolo de chocolate.jpg" alt="bolo_de_chocolate">
                     </div>
@@ -117,7 +117,7 @@
                     <p class="price">R$ 5,90</p>
                     <p class="check"></p>
                 </div>
-                <div class="option" onclick="selecionar_opcao(this)">
+                <div class="option dessert" onclick="selectOption(this)">
                     <div class="container-img">
                         <img src="assets/img/açai.jpg" alt="açai">
                     </div>
@@ -132,7 +132,7 @@
     </main>
 
     <footer>
-        <button disabled onclick="fechar_pedido()">Selecione os 3 itens para fechar o pedido</button>
+        <button disabled >Selecione os 3 itens para fechar o pedido</button>
     </footer>
 
     <div id="caixa_sobrepor_fechar_pedido">

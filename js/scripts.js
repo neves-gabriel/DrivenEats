@@ -13,6 +13,26 @@ const pedido = {
     }
 };
 
+const order = {
+    dish: {
+        item: "",
+        price: ""
+    },
+    drink: {
+        item: "",
+        price: ""
+    },
+    dessert: {
+        item: "",
+        price: ""
+    },
+    name: "",
+    address: "",
+    total: ""
+};
+
+const orderButton = document.querySelector('footer button');
+
 function selecionar_opcao(elemento) {
     const classe_categoria = elemento.parentNode.parentNode.className;
     let categoria = "";
@@ -83,4 +103,51 @@ function tudo_certo() {
         erro_dados.classList.remove("aviso_erro_desativado");
         erro_dados.classList.add("aviso_erro_ativado");
     }
+}
+
+function selectOption(option) {
+
+    const category = option.parentNode.id;
+
+    if (order[`${category}`].item === option.querySelector(".item").innerHTML) {
+        order[`${category}`].item = "";
+        order[`${category}`].price = "";
+        option.classList.remove("selected");
+    } else {
+        if (order[`${category}`].item === "") {
+            order[`${category}`].item = option.querySelector(".item").innerHTML;
+            order[`${category}`].price = option.querySelector(".price").innerHTML.slice(3);
+            option.classList.add("selected");
+        } else {
+            const classe_categoria = document.getElementsByClassName(`option ${category}`);
+                for (var i = 0; i < classe_categoria.length; i++) {
+                    classe_categoria[i].classList.remove("selected");
+                }
+            order[`${category}`].item = option.querySelector(".item").innerHTML;
+            order[`${category}`].price = option.querySelector(".price").innerHTML.slice(3);
+            option.classList.add("selected");
+        }
+    }
+
+    if (order.dish.item !== "" &&
+        order.drink.item !== "" &&
+        order.dessert.item !== "") {
+        orderTotal();
+        activateOrderButton();
+    } else {
+        orderButton.disabled = true;
+        orderButton.innerHTML = "Selecione os 3 itens para fechar o pedido";
+    }
+
+    console.log(order);
+}
+
+function orderTotal() {
+    const totalNumber = Number(order.dish.price.replace(",", '.')) + Number(order.drink.price.replace(",", '.')) + Number(order.dessert.price.replace(",", '.'));
+    order.total = String(totalNumber.toFixed(2)).replace(".", ',');
+}
+
+function activateOrderButton() {
+    orderButton.disabled = false;
+    orderButton.innerHTML = "Fechar pedido";
 }
