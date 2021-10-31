@@ -97,20 +97,8 @@ section .container-img img{
     cursor: pointer;
 }
 
-.opcao_selecionada {
-    position: relative;
-    width: 144px;
-    height: auto;
-    display: flex;
-    flex-direction: column;
-    background: #FFFFFF;
+.option.selected{
     box-shadow: 0px 0px 0px 5px #32B72F inset,  0px 4px 4px rgba(0, 0, 0, .25);
-    border-radius: 9px;
-    margin-right: 16px;
-    padding: 18px 14px 0px;
-    font-family: Roboto;
-    font-style: normal;
-    cursor: pointer;
 }
 
 .item{
@@ -136,27 +124,14 @@ section .container-img img{
     bottom: 13px;
 }
 
-.option .check{
-    display: none;
+.option.selected .check{
+    display: block;
     background-image: url(../assets/img/check.png);
     width: 17px;
     height: 17px;
     position: absolute;
     right: 15px;
     bottom: 11px;
-}
-
-.option .check{
-    background-image: url(../assets/img/check.png);
-    width: 17px;
-    height: 17px;
-    position: absolute;
-    right: 15px;
-    bottom: 11px;
-}
-
-.escondido{
-    display: none;
 }
 
 footer{        
@@ -183,6 +158,7 @@ footer button{
     color: #FFFFFF;
     transition: .5s;
     text-align: center;
+    background: #32B72F;
 }
 
 footer button:focus{
@@ -193,7 +169,7 @@ footer button:disabled,button[disabled]{
     background: #CBCBCB;
 }
 
-#caixa_sobrepor_fechar_pedido{
+#overlay-confirm-order{
     box-sizing: content-box;
     background: rgba(255, 255, 255, 0.9);
     position: fixed;
@@ -201,7 +177,7 @@ footer button:disabled,button[disabled]{
     left: 0;
     right: 0;
     bottom: 0;
-    width: 435px;
+    width: 100%;
     height: 100%;
     display: none;
     justify-content: center;
@@ -209,7 +185,7 @@ footer button:disabled,button[disabled]{
     z-index: 3;
 }
 
-.barra_confirmar_pedido {
+.confirm-order-box{
     font-size: 22px;
     display: flex;
     align-items: center;    
@@ -230,7 +206,7 @@ footer button:disabled,button[disabled]{
     letter-spacing: 0.018em;
 }
 
-.barra_confirmar_pedido .titulo {
+.confirm-order-box h1{
     font-family: Roboto;
     font-style: normal;
     font-weight: bold;
@@ -238,54 +214,34 @@ footer button:disabled,button[disabled]{
     line-height: 26px;
     text-align: center;
     color: #FFFFFF;
-    margin-bottom: 28px;
+    margin-bottom: 22px;
 }
 
-.resumo_pedido {
-    text-align: justify;
+.confirm-order-box li{
+    line-height: 26px;
+    width: 329px;
+    display: flex;
+    justify-content: space-between;
+    margin: 6px 0;
 }
 
-.barra_confirmar_pedido p {
-    margin-bottom: 13px;
-}
-
-.barra_confirmar_pedido input{
-    width: 100%;
-    height: 26px;
-    font-size: 15px;
-    border-radius: 9px;
-    display: inline;
-    outline: 0px;
-    border: none;
-    color: rgb(114, 114, 114);
-    padding-left: 10px;
-}
-
-.aviso_erro_desativado{
-    display: none;
-}
-
-.aviso_erro_ativado{
-    display: block;
-    font-size: 15px;
-    color: red;
-    font-weight: bold;
-}
-
-.barra_confirmar_pedido button{
+.confirm-order-box button{
     font-size: 22px;
     height: 52px;
     font-weight: bold;
     cursor: pointer;
+    border: none;
 }
 
-.botao_tudo_certo{
+.confirm-order-button{
+    padding: 0 45px;
     margin-top: 10px;
+    border-radius: 100px;
     background: #FFFFFF;
     color: #50D074;
 }
 
-.botao_cancelar{
+.cancel-order-button{
     color: #FFFFFF;
     font-size: 20px;
     background: #50D074;
