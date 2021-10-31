@@ -63,12 +63,7 @@ section{
 }
 
 .container-img img{
-    height: 100%;
     width: 100%;
-}
-
-section .container-img img{
-    width: auto;
 }
 
 .options{
@@ -95,6 +90,16 @@ section .container-img img{
     font-family: Roboto;
     font-style: normal;
     cursor: pointer;
+}
+
+.option h1{
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 19px;
+    margin: 0 0 5px 0;
+    color: #333333;
 }
 
 .option.selected{
