@@ -132,23 +132,16 @@
     </main>
 
     <footer>
-        <button disabled >Selecione os 3 itens para fechar o pedido</button>
+        <button disabled onclick="finishOrder()">Selecione os 3 itens para fechar o pedido</button>
     </footer>
 
-    <div id="caixa_sobrepor_fechar_pedido">
-        <div class="barra_confirmar_pedido">
-            <p class="titulo">Confirme seu pedido</p>
-            <p class="resumo_pedido">
-            </p>
-            <p class="dados_cliente">
-                <p>Nome:</p>
-                <p><input type="text" class="nome" placeholder="Digite seu nome"></p>
-                <p>Endereço:</p>
-                <p><input type="text" class="endereco" placeholder="Digite seu endereço completo"></p>
-            </p>
-            <p class="aviso_erro_desativado" id="erro_dados">Por favor, preencha seu nome e endereco acima!.</p>
-            <button class="botao_tudo_certo" onclick="tudo_certo()">Tudo certo, pode pedir!</button>
-            <button class="botao_cancelar" onclick="cancelar_pedido()">Cancelar</button>
+    <div id="overlay-confirm-order">
+        <div class="confirm-order-box">
+            <h1>Confirme seu pedido</h1>
+            <ul>
+            </ul>
+            <button class="confirm-order-button" onclick="sendOrder()">Tudo certo, pode pedir!</button>
+            <button class="cancel-order-button" onclick="cancelOrder()">Cancelar</button>
         </div>
     </div>
 
