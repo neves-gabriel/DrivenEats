@@ -159,6 +159,7 @@ footer button{
     transition: .5s;
     text-align: center;
     background: #32B72F;
+    cursor: pointer;
 }
 
 footer button:focus{
@@ -167,6 +168,7 @@ footer button:focus{
 
 footer button:disabled,button[disabled]{
     background: #CBCBCB;
+    cursor: initial;
 }
 
 #overlay-confirm-order{
