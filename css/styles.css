@@ -63,12 +63,7 @@ section{
 }
 
 .container-img img{
-    height: 100%;
     width: 100%;
-}
-
-section .container-img img{
-    width: auto;
 }
 
 .options{
