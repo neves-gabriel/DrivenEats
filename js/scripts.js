@@ -85,12 +85,12 @@ function reviewOrder() {
 function sendOrder() {
     if (order.name !== "" && order.address !== "" && order.name !== null && order.address !== null) {
         let message = `Olá, gostaria de fazer o pedido:
-            - Prato: ${order.dish.item}
-            - Bebida: ${order.drink.item}
-            - Sobremesa: ${order.dessert.item}
-            Total: R$ ${String(Number(order.total.replace(",", '.')).toFixed(2))}\n
-            Nome: ${order.name}
-            Endereço: ${order.address}
+        - Prato: ${order.dish.item}
+        - Bebida: ${order.drink.item}
+        - Sobremesa: ${order.dessert.item}
+        Total: R$ ${String(Number(order.total.replace(",", '.')).toFixed(2))}\n
+        Nome: ${order.name}
+        Endereço: ${order.address}
         `
         message = encodeURIComponent(message);
         let whatsUrl = "https://wa.me/5562985286797" + "?text=" + message;
