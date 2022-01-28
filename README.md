@@ -1,33 +1,21 @@
-[![Contributors][contributors-shield]][contributors-url]
-[![Forks][forks-shield]][forks-url]
-[![Stargazers][stars-shield]][stars-url]
-[![Issues][issues-shield]][issues-url]
-[![LinkedIn][linkedin-shield]][linkedin-url]
+# DrivenEats
 
-# Projeto - DrivenEats
+Project using JavaScript to implement DrivenEats mobile site, a special restaurant that delivers your order in 6 minutes.
+The website allows you to easily choose your combo, then send the order by WhatsApp directly to the restaurant.
 
-### Projeto usando JavaScript de implementação do site mobile do DrivenEats, um restaurante especial que entrega seu pedido em 6 minutos.
-### O site permite de forma fácil a escolha do seu combo, enviando em seguida o pedido por WhatsApp diretamente para o restaurante.
- 
-### Realizado por Gabriel Neves no Bootcamp Responde Aí
 
-### Site disponivel em: https://neves-gabriel.github.io/DrivenEats/
+## Project preview
 
-#### Preview do projeto:
-![Preview do projeto](img/preview.png)
+![Preview do projeto](assets/img/preview.png)
+## Deploy
 
-<!-- MARKDOWN LINKS & IMAGES -->
-<!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
-[contributors-shield]: https://img.shields.io/github/contributors/neves-gabriel/DrivenEats.svg?style=for-the-badge
-[contributors-url]: https://github.com/neves-gabriel/DrivenEats/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/neves-gabriel/DrivenEats.svg?style=for-the-badge
-[forks-url]: https://github.com/neves-gabriel/DrivenEats/network/members
-[stars-shield]: https://img.shields.io/github/stars/neves-gabriel/DrivenEats.svg?style=for-the-badge
-[stars-url]: https://github.com/neves-gabriel/DrivenEats/stargazers
-[issues-shield]: https://img.shields.io/github/issues/neves-gabriel/DrivenEats.svg?style=for-the-badge
-[issues-url]: https://github.com/neves-gabriel/DrivenEats/issues
-[license-shield]: https://img.shields.io/github/license/neves-gabriel/DrivenEats.svg?style=for-the-badge
-[license-url]: https://github.com/neves-gabriel/DrivenEats/blob/master/LICENSE.txt
-[linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
-[linkedin-url]: https://www.linkedin.com/in/gabriel-rodrigues-neves/
-[product-screenshot]: images/screenshot.png
+Website available at: https://neves-gabriel.github.io/DrivenEats/
+## Author
+
+👤 **Gabriel Neves**
+
+- LinkedIn: [@GabrielNeves](https://www.linkedin.com/in/gabriel-rodrigues-neves/)
+- Github: [@neves-gabriel](https://github.com/neves-gabriel)
+## Stack
+
+**Front-end:** ![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E) ![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white) ![CSS3](https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white)
